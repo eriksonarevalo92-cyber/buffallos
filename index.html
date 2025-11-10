@@ -15,14 +15,29 @@
         .hero-section {
             background: url('Images_Buffalo/Fondo.inicio2.jpg') no-repeat center center fixed; /* Fondo fijo */
             background-size: cover;
-            color: white;
-            padding: 100px 0;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Más sombra para mejor legibilidad */
-            min-height: 400px; /* Altura mínima para que se vea el fondo */
-            display: flex;
-            align-items: center; /* Centrar contenido verticalmente */
-            justify-content: center; /* Centrar contenido horizontalmente */
-        }
+    color: white;
+    padding: 100px 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    min-height: 400px; /* Altura para escritorio (Desktop) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MEDIA QUERY: Aplica estos estilos solo para pantallas de 768px o menos (móviles y tablets pequeñas) */
+@media (max-width: 768px) {
+    .hero-section {
+        /* Reduce la altura mínima para que la imagen se adapte mejor */
+        min-height: 300px; 
+        /* Reduce el padding para que el contenido ocupe menos espacio */
+        padding: 60px 0; 
+    }
+    
+    /* Opcional: Ajustar el tamaño del texto principal para que quepa mejor */
+    .hero-section .display-1 {
+        font-size: 3rem; /* Reduce el tamaño del título "Buffalo's Car" */
+    }
+}
 
         .hero-section .container {
             background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el texto */
@@ -236,3 +251,4 @@
 </body>
 
 </html>
+
