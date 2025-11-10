@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffalo's Car - Taller Mecánico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* Un fondo muy ligero para el resto de la página */
+        }
+
+        .hero-section {
+            background: url('Images_Buffalo/Fondo.inicio2.jpg') no-repeat center center fixed; /* Fondo fijo */
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Más sombra para mejor legibilidad */
+            min-height: 400px; /* Altura mínima para que se vea el fondo */
+            display: flex;
+            align-items: center; /* Centrar contenido verticalmente */
+            justify-content: center; /* Centrar contenido horizontalmente */
+        }
+
+        .hero-section .container {
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el texto */
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px; /* Altura fija para las imágenes de servicio */
+            object-fit: cover; /* Recorta la imagen para que cubra el espacio */
+        }
+        .service-card .card-body {
+            flex-grow: 1; /* Permite que el cuerpo de la tarjeta ocupe el espacio restante */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .service-card .card-title {
+            color: #dc3545; /* Rojo de Bootstrap */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">**Buffalo's Car** 🚗</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#citas">Agendar Cita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-1 fw-bold">Buffalo's Car</h1>
+            <p class="lead mt-3">Tu taller de confianza para un servicio completo y de calidad.</p>
+            <a href="#citas" class="btn btn-danger btn-lg mt-4">¡Agenda tu Cita Hoy!</a>
+        </div>
+    </header>
+    
+    <section id="servicios" class="container py-5">
+        <h2 class="text-center mb-5 display-4 fw-bold">🛠 Nuestros Servicios</h2>
+        <div class="row text-center justify-content-center">
+            
+            <div class="col-md-6 col-lg-3 mb-4 d-flex">
+                <div class="card service-card">
+                    <img src="Images_Buffalo/Mecanica_General.jpg" class="card-img-top" alt="Mecánica General">
+                    <div class="card-body">
+                        <h3 class="card-title">Mecánica General</h3>
+                        <p class="card-text">Diagnóstico completo, reparación de motor, frenos y suspensión, cambio de aceite y más.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 mb-4 d-flex">
+                <div class="card service-card">
+                    <img src="Images_Buffalo/Limpieza_de_inyectores.jpg" class="card-img-top" alt="Limpieza de Inyectores">
+                    <div class="card-body">
+                        <h3 class="card-title">Limpieza de Inyectores</h3>
+                        <p class="card-text">Mejora el rendimiento, la eficiencia y el consumo de combustible de tu vehículo con nuestro servicio especializado.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 mb-4 d-flex">
+                <div class="card service-card">
+                    <img src="Images_Buffalo/Aire_acondicionado.jpg" class="card-img-top" alt="Mantenimiento de Aire Acondicionado">
+                    <div class="card-body">
+                        <h3 class="card-title">Mantenimiento de Aire Acondicionado</h3>
+                        <p class="card-text">Recarga de gas, revisión y reparación del sistema de enfriamiento para un confort óptimo en tu auto.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 mb-4 d-flex">
+                <div class="card service-card">
+                    <img src="Images_Buffalo/latonería_pintura.jpg" class="card-img-top" alt="Latonería y Pintura">
+                    <div class="card-body">
+                        <h3 class="card-title">Latonería y Pintura</h3>
+                        <p class="card-text">Reparación de choques, enderezado de chasis y pintura profesional con acabados de alta calidad en cabina.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <hr class="my-5"> <section id="citas" class="container py-5 bg-light">
+        <h2 class="text-center mb-4 display-4 fw-bold">📅 Agendar Cita por WhatsApp</h2>
+        <p class="text-center text-muted mb-5">
+            ¡Envíanos un mensaje rápido y coordina tu servicio!
+        </p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="form-cita">
+                    
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono (WhatsApp)</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Ej: +584121234567" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="servicio" class="form-label">Servicio Requerido</label>
+                        <select class="form-select" id="servicio" required>
+                            <option selected disabled value="">Seleccione un servicio</option>
+                            <option value="Mecanica General">Mecánica General</option>
+                            <option value="Limpieza de Inyectores">Limpieza de Inyectores</option>
+                            <option value="Mantenimiento de Aire Acondicionado">Mantenimiento de Aire Acondicionado</option>
+                            <option value="Latoneira y Pintura">Latonería y Pintura</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label">Fecha Deseada</label>
+                        <input type="date" class="form-control" id="fecha" required>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-success btn-lg" onclick="generarLinkWhatsApp()">
+                            Enviar Solicitud por WhatsApp 🟢
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">Buffalo's Car | Tu mejor opción para el cuidado de tu vehículo.</p>
+            <p class="mb-1">Teléfono: (0412) 714 9360 | Dirección: Av. Principal las barrancas, Local </p>
+            <p class="mb-1">Rif J1223456-7 </p>
+            <div class="social-icons mt-3">
+            <a href="https://www.instagram.com/buffaloscar.ca?igsh=MWNqZzNsdW51ZW5uMw==" target="_blank" class="text-white me-3">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            
+            <a href="https://wa.me/584127149360" target="_blank" class="text-white">
+                <i class="fab fa-whatsapp fa-lg"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // *** IMPORTANTE: Reemplaza XXXXXXXXXX con tu número de WhatsApp completo (incluyendo código de país) ***
+        const NUMERO_WHATSAPP = "584127149360"; // Ejemplo: 58 (Venezuela) + 412 (operadora) + 1234567 (número)
+
+        function generarLinkWhatsApp() {
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const servicio = document.getElementById('servicio').value;
+            const fecha = document.getElementById('fecha').value;
+
+            // Validar que todos los campos estén llenos
+            if (!nombre || !telefono || servicio === "" || !fecha) {
+                alert("Por favor, complete todos los campos para agendar su cita.");
+                return;
+            }
+
+            // Construir el mensaje
+            let mensaje = "¡Hola Buffalo's Car! Quisiera solicitar una cita con la siguiente información:";
+            mensaje += "\n\n👤 Nombre: " + nombre;
+            mensaje += "\n📞 Teléfono: " + telefono;
+            mensaje += "\n🛠 Servicio: " + servicio;
+            mensaje += "\n📅 Fecha Deseada: " + fecha;
+            mensaje += "\n\nPor favor, confírmenme la disponibilidad. ¡Gracias!";
+
+            // Codificar el mensaje para la URL
+            const mensajeCodificado = encodeURIComponent(mensaje);
+
+            // Crear el enlace de WhatsApp
+            const linkWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensajeCodificado}`;
+
+            // Abrir el enlace
+            window.open(linkWhatsApp, '_blank');
+        }
+    </script>
+
+</body>
+</html>
